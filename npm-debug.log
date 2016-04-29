@@ -1,0 +1,170 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'ruby' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose cache add [ 'ruby', null ]
+5 verbose cache add name=undefined spec="ruby" args=["ruby",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'ruby',
+6 verbose parsed url   path: 'ruby',
+6 verbose parsed url   href: 'ruby' }
+7 silly lockFile 18e40e14-ruby ruby
+8 verbose lock ruby /home/findlay/.npm/18e40e14-ruby.lock
+9 silly lockFile 18e40e14-ruby ruby
+10 silly lockFile 18e40e14-ruby ruby
+11 verbose addNamed [ 'ruby', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile f07098c3-ruby ruby@
+14 verbose lock ruby@ /home/findlay/.npm/f07098c3-ruby.lock
+15 silly addNameRange { name: 'ruby', range: '*', hasData: false }
+16 verbose request where is /ruby
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 99276437ccf7c204
+19 verbose url raw /ruby
+20 verbose url resolving [ 'https://registry.npmjs.org/', './ruby' ]
+21 verbose url resolved https://registry.npmjs.org/ruby
+22 verbose request where is https://registry.npmjs.org/ruby
+23 info trying registry request attempt 1 at 19:07:28
+24 http GET https://registry.npmjs.org/ruby
+25 http 200 https://registry.npmjs.org/ruby
+26 silly registry.get cb [ 200,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"71UV4389P18Q6VNAGJA57HB4L"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=300',
+26 silly registry.get     'content-length': '14575',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Fri, 29 Apr 2016 22:07:29 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-iad2135-IAD',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1461967648.998776,VS0,VE95',
+26 silly registry.get     vary: 'Accept-Encoding' } ]
+27 silly addNameRange number 2 { name: 'ruby', range: '*', hasData: true }
+28 silly addNameRange versions [ 'ruby',
+28 silly addNameRange   [ '0.1.0',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.2.2',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.6.0' ] ]
+29 verbose addNamed [ 'ruby', '0.6.0' ]
+30 verbose addNamed [ '0.6.0', '0.6.0' ]
+31 silly lockFile e9ba1125-ruby-0-6-0 ruby@0.6.0
+32 verbose lock ruby@0.6.0 /home/findlay/.npm/e9ba1125-ruby-0-6-0.lock
+33 silly lockFile 13984a3e-ry-npmjs-org-ruby-ruby-0-6-0-tgz https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+34 verbose lock https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz /home/findlay/.npm/13984a3e-ry-npmjs-org-ruby-ruby-0-6-0-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz',
+35 verbose addRemoteTarball   'cce1e851ff988ddeefa1c3db9996d52a0731ec5e' ]
+36 info retry fetch attempt 1 at 19:07:29
+37 verbose fetch to= /tmp/npm-4565-whGqsF9O/registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+38 http GET https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+39 http 200 https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+40 silly lockFile 13984a3e-ry-npmjs-org-ruby-ruby-0-6-0-tgz https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+41 silly lockFile 13984a3e-ry-npmjs-org-ruby-ruby-0-6-0-tgz https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz
+42 silly lockFile e9ba1125-ruby-0-6-0 ruby@0.6.0
+43 silly lockFile e9ba1125-ruby-0-6-0 ruby@0.6.0
+44 silly lockFile f07098c3-ruby ruby@
+45 silly lockFile f07098c3-ruby ruby@
+46 silly resolved [ { name: 'ruby',
+46 silly resolved     version: '0.6.0',
+46 silly resolved     description: 'Helper methods from ruby ported to Node.',
+46 silly resolved     main: 'dist/index.js',
+46 silly resolved     scripts:
+46 silly resolved      { build: 'gulp babel',
+46 silly resolved        docs: 'gulp docs',
+46 silly resolved        'docs:deploy': 'gulp docs:deploy',
+46 silly resolved        lint: 'gulp lint',
+46 silly resolved        test: 'npm run build && npm run lint && gulp test' },
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'git+ssh://git@github.com/crookedneighbor/ruby-node.git' },
+46 silly resolved     keywords: [ 'ruby', 'util' ],
+46 silly resolved     author: { name: 'Blade Barringer', email: 'blade@crookedneighbor.com' },
+46 silly resolved     license: 'ISC',
+46 silly resolved     bugs: { url: 'https://github.com/crookedneighbor/ruby-node/issues' },
+46 silly resolved     homepage: 'https://github.com/crookedneighbor/ruby-node#readme',
+46 silly resolved     devDependencies:
+46 silly resolved      { babel: '^5.8.21',
+46 silly resolved        chai: '^3.2.0',
+46 silly resolved        'chai-as-promised': '^5.1.0',
+46 silly resolved        del: '^2.0.2',
+46 silly resolved        docco: '^0.7.0',
+46 silly resolved        'eslint-plugin-mocha': '^1.0.0',
+46 silly resolved        glob: '^5.0.15',
+46 silly resolved        gulp: '^3.9.0',
+46 silly resolved        'gulp-babel': '^5.3.0',
+46 silly resolved        'gulp-eslint': '^1.0.0',
+46 silly resolved        'gulp-gh-pages': '^0.5.3',
+46 silly resolved        logtrap: '0.0.1',
+46 silly resolved        mocha: '^2.3.3' },
+46 silly resolved     dependencies: { lodash: '^3.10.1' },
+46 silly resolved     gitHead: 'ec74d3e69530eb6c3de9acc8a8201e60d9348660',
+46 silly resolved     _id: 'ruby@0.6.0',
+46 silly resolved     _shasum: 'cce1e851ff988ddeefa1c3db9996d52a0731ec5e',
+46 silly resolved     _from: 'ruby@',
+46 silly resolved     _npmVersion: '3.3.8',
+46 silly resolved     _nodeVersion: '4.1.1',
+46 silly resolved     _npmUser: { name: 'bladebarringer', email: 'blade@crookedneighbor.com' },
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'cce1e851ff988ddeefa1c3db9996d52a0731ec5e',
+46 silly resolved        tarball: 'https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/ruby/-/ruby-0.6.0.tgz' } ]
+47 info install ruby@0.6.0 into /usr/local/lib
+48 info installOne ruby@0.6.0
+49 verbose lib/node_modules/ruby unbuild
+50 verbose tar unpack /home/findlay/.npm/ruby/0.6.0/package.tgz
+51 silly lockFile 182d3c05--usr-local-lib-node-modules-ruby tar:///usr/local/lib/node_modules/ruby
+52 verbose lock tar:///usr/local/lib/node_modules/ruby /home/findlay/.npm/182d3c05--usr-local-lib-node-modules-ruby.lock
+53 silly lockFile 3246ec9c-ndlay-npm-ruby-0-6-0-package-tgz tar:///home/findlay/.npm/ruby/0.6.0/package.tgz
+54 verbose lock tar:///home/findlay/.npm/ruby/0.6.0/package.tgz /home/findlay/.npm/3246ec9c-ndlay-npm-ruby-0-6-0-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/ruby'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/ruby']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/ruby',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/ruby',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:107:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Linux 3.19.0-32-generic
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "ruby"
+60 error cwd /home/findlay/Documents/Development/Barberly
+61 error node -v v0.10.33
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/ruby
+64 error fstream_path /usr/local/lib/node_modules/ruby
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/ruby'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:107:15)
+71 verbose exit [ 3, true ]

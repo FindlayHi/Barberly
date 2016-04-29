@@ -1,0 +1,23 @@
+{
+  "name": "Barberly",
+  "version": "1.0.0",
+  "description": "An barbershop reservation system built in MEAN stack",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "compass": "^0.1.1",
+    "express": "^4.13.4",
+    "lodash": "^4.11.1",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.4.14",
+    "resourcejs": "^1.2.0",
+    "rubygems": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
