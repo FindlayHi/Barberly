@@ -25,6 +25,9 @@ app.use(function(req, res, next) {
 mongoose.connect('mongodb://localhost/Barberly');
 mongoose.connection.once('open', function() {
 
+  //Load mods
+  app.modules = require('./models/index');
+
   console.log('Listening on port 3000...');
   app.listen(3000);
 });
