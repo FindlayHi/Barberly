@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 
-// Create the MovieSchema.
+// Create the AppointmentSchema.
 var AppointmentSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -16,7 +16,7 @@ var AppointmentSchema = new mongoose.Schema({
     required: true
   },
   cost: {
-    type: String,
+    type: Number,
     required: true
   }
 });
