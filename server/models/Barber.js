@@ -13,4 +13,5 @@ var BarberSchema = new mongoose.Schema({
     }
 });
 
+// Export the Schema
 module.exports = BarberSchema;

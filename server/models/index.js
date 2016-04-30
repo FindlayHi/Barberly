@@ -1,3 +1,4 @@
 module.exports = {
-Appointment: (require('/Appointment.js'))
+  Appointment: require('./Appointment.js'),
+  Barber: require('./Barber.js'),
 };

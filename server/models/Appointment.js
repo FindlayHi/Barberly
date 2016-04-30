@@ -22,4 +22,4 @@ var AppointmentSchema = new mongoose.Schema({
 });
 
 // Export the Schema
-module.exports = AppointmentSchemal;
+module.exports = AppointmentSchema;
