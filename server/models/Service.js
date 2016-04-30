@@ -1,25 +1,25 @@
 var mongoose = require('mongoose');
 
 
-// Create the AppointmentSchema.
-var AppointmentSchema = new mongoose.Schema({
-    client: {
+// Create the ServiceSchema.
+var ServiceSchema = new mongoose.Schema({
+    name: {
         type: String,
         required: true
     },
-    barber: {
+    timeRequired: {
+        type: Number,
+        required: true
+    },
+    description: {
         type: String,
         required: true
     },
-    service: {
-        type: String,
-        required: true
-    },
-    time: {
-        type: Date,
+    cost: {
+        type: Number,
         required: true
     }
 });
 
 // Export the Schema
-module.exports = AppointmentSchema;
+module.exports = ServiceSchema;
