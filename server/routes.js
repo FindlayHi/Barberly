@@ -1,6 +1,6 @@
 module.exports =  {
-  '/Appointment' : require ('./controllers/appointmentcontroller'),
-  '/Barber' : require ('./controllers/barbercontroller'),
-  '/Client' : require('./controllers/clientcontroller'),
+  '/Appointment' : require ('./controllers/appointmentController'),
+  '/Barber' : require ('./controllers/barberController'),
+  '/Client' : require('./controllers/clientController'),
   '/Service' : require('./controllers/serviceController')
 };
