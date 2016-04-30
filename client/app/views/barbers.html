@@ -8,7 +8,13 @@
     </th>
   </thead>
   <tbody>
-    <tr ng-repreat="barber in barbers">
+    <tr ng-repreat="barber in barberList">
+      <td>
+        {{barber.name}}
+      </td>
+      <td>
+        {{barber.bio}}
+      </td>
     </tr>
   </tbody>
 </table>

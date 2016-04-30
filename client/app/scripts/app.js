@@ -13,10 +13,15 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngRoute',
+    'restangular',
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, RestangularProvider) {
+
+    // Set the base URL for Restangular.
+    RestangularProvider.setBaseUrl('http://localhost:3000');
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,11 +32,6 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
-      })
-      .when('/barbers', {
-        templateUrl: 'views/barbers.html',
-        controller: 'BarbersCtrl',
-        controllerAs: 'barbers'
       })
       .when('/barbers', {
         templateUrl: 'views/barbers.html',
@@ -51,4 +51,12 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .factory('BarberRestangular', function(Restangular){
+    return Restangular.withConfig(function(RestangularConfigurer){
+      RestangularConfigurer.setRestangularFields({id: '_id'});
+    });
+  })
+  .factory('Barber', function (BarberRestangular){
+    return BarberRestangular.service('Barber');
   });
