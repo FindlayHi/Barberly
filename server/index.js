@@ -8,16 +8,18 @@ var _ = require('lodash');
 var app = express();
 
 // Add Middleware necessary for REST API's
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 // CORS Support
 app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
 
@@ -25,9 +27,9 @@ app.use(function(req, res, next) {
 mongoose.connect('mongodb://localhost/Barberly');
 mongoose.connection.once('open', function() {
 
-  //Load mods
-  app.modules = require('./models/index');
+    //Load mods used to dependency injection of models into controllers. MVC sep
+    app.modules = require('./models/index');
 
-  console.log('Listening on port 3000...');
-  app.listen(3000);
+    console.log('Listening on port 3000...');
+    app.listen(3000);
 });
