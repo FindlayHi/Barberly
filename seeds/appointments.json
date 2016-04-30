@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Shave",
+    "timeRequired": 25,
+    "description": "Get shaved the way grandpa did with hot towels, shavettes, shave soap, after shaves and a fresh new face",
+    "cost": 25
+  },
+  {
+    "name": "Haircut",
+    "timeRequired": 15,
+    "description": "This is a standard men's haircut (This is not for long hair or kids cuts)",
+    "cost": 16
+  },
+  {
+    "name": "Beard Trim",
+    "timeRequired": 5,
+    "description": "Standard beard trim. (Does not include razor line up's or neck clean up's)",
+    "cost": 6
+  },
+  {
+    "name": "Head and Face Massage",
+    "timeRequired": 20,
+    "description": "Stressful day? Hangover? A head and face massage is for pure relaxation.",
+    "cost": 22
+  }
+]

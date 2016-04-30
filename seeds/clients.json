@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Findlay",
+    "phone": "902-555-7625",
+    "email": "findlay@gmail.com",
+    "facebook": null,
+    "notes": "Do not book with children",
+    "banned": false
+  },
+  {
+    "name": "Christian",
+    "phone": "902-555-0085",
+    "email": "christian@gmail.com",
+    "facebook": null,
+    "notes": "The brush tickles",
+    "banned": false
+  },
+  {
+    "name": "Matthew",
+    "phone": "902-555-1200",
+    "email": "matt@gmail.com",
+    "facebook": null,
+    "notes": "Don't get ketchup on his shirt",
+    "banned": false
+  },
+  {
+    "name": "Tyler",
+    "phone": "902-555-3030",
+    "email": "tyler@gmail.com",
+    "facebook": null,
+    "notes": "prefers nsync look",
+    "banned": false
+  },
+  {
+    "name": "Justin",
+    "phone": "902-555-8008",
+    "email": "justin@gmail.com",
+    "facebook": null,
+    "notes": "Complains about every cut",
+    "banned": true
+  }
+]
