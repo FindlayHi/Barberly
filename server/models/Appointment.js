@@ -3,20 +3,26 @@ var mongoose = require('mongoose');
 
 // Create the AppointmentSchema.
 var AppointmentSchema = new mongoose.Schema({
-    name: {
-        type: String,
+    client: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Client',
+        index: true,
         required: true
     },
-    timeRequired: {
-        type: Number,
+    barber: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Barber',
+        index: true,
         required: true
     },
-    description: {
-        type: String,
+    service: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Service',
+        index: true,
         required: true
     },
-    cost: {
-        type: Number,
+    time: {
+        type: Date,
         required: true
     }
 });
