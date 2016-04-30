@@ -5,9 +5,3 @@ module.exports = {
   Client: require('./Client.js'),
 
 };
-
-app.models = require('./models/index');
-
-// load the routes
-
-var routes = require('./routes');

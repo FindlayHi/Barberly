@@ -28,7 +28,7 @@ mongoose.connect('mongodb://localhost/Barberly');
 mongoose.connection.once('open', function() {
 
     //Load mods used to dependency injection of models into controllers. MVC sep
-    app.modules = require('./models/index');
+    app.models = require('./models/index');
 
     //load the routes.
     var routes = require('./routes');

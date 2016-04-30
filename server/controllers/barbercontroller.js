@@ -5,7 +5,7 @@ module.exports = function(app, route) {
     //setup the controller for REST.
     var rest = restful.model(
         'Barber',
-        app.model.Barber
+        app.models.Barber
     ).methods(['get', 'put', 'post', 'delete']);
 
     //register this enpoint with the app
