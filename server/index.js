@@ -30,6 +30,12 @@ mongoose.connection.once('open', function() {
     //Load mods used to dependency injection of models into controllers. MVC sep
     app.modules = require('./models/index');
 
+    //load the routes.
+    var routes = require('./routes');
+    _.each(routes, function(controller, route) {
+        app.use(route, controller(app,route));
+    });
+
     console.log('Listening on port 3000...');
     app.listen(3000);
 });
