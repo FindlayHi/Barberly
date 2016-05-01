@@ -1,1 +1,51 @@
-<p>This is the appointments view.</p>
+<a class="btn btn-primary" href="/#/create/appointment">
+  <span class="glyphicon glyphicon-plus"></span>Add Appointment</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>
+      Client:
+    </th>
+    <th>
+      Service:
+    </th>
+    <th>
+      Barber:
+    </th>
+    <th>
+      Time:
+    </th>
+    <th>
+      Controls
+    </th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="appointment in appointmentsList">
+      <!-- <td>
+        <a ng-href="/#/appointment/{{appointment._id}}">{{appointment.name}}</a>
+      </td> -->
+      <td>
+        {{appointment.client.name}}
+      </td>
+      <td>
+        {{appointment.service.name}}
+      </td>
+      <td>
+        {{appointment.barber.name}}
+      </td>
+      <td>
+        {{appointment.time}}
+      </td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/appointment/{{appointment._id}}/edit" class="btn button-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/appointment/{{appointment._id}}/delete" class="btn button-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

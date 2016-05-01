@@ -1,1 +1,14 @@
-<p>This is the appointment-view view.</p>
+<ng-include src="'views/appointment-nav.html'"></ng-include>
+<h3>Appointment Details</h3>
+<p>
+  <b>Client: </b>{{appointment.client.name}}
+</p>
+<p>
+  <b>Service: </b>{{appointment.service.name}}
+</p>
+<p>
+  <b>Barber: </b>{{appointment.barber.name}}
+</p>
+<p>
+  <b>Time: </b>{{appointment.time}}
+</p>

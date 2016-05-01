@@ -1,3 +1,6 @@
+<a class="btn btn-primary" href="/#/create/client">
+  <span class="glyphicon glyphicon-plus"></span>Add Client</a>
+<br>
 <table class="table table-striped">
   <thead>
     <th>
@@ -18,11 +21,14 @@
     <th>
       Banned:
     </th>
+    <th>
+      Controls
+    </th>
   </thead>
   <tbody>
     <tr ng-repeat="client in clientList">
       <td>
-        {{client.name}}
+        <a ng-href="/#/client/{{client._id}}">{{client.name}}</a>
       </td>
       <td>
         {{client.phone}}
@@ -38,6 +44,16 @@
       </td>
       <td>
         {{client.banned}}
+      </td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/client/{{client._id}}/edit" class="btn button-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/client/{{client._id}}/delete" class="btn button-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
       </td>
     </tr>
   </tbody>

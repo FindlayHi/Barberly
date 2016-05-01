@@ -10,7 +10,7 @@
 angular.module('clientApp')
   .controller('BarberEditCtrl', function($scope, $routeParams, Barber, $location) {
     $scope.editBarber = true;
-    $scope.movie = {};
+    $scope.barber = {};
     Barber.one($routeParams.id).get().then(function(barber) {
       $scope.barber = barber;
       $scope.saveBarber = function() {

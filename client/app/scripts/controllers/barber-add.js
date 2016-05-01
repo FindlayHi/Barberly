@@ -15,5 +15,4 @@ angular.module('clientApp')
         $location.path('/barbers');
       });
     };
-
   });

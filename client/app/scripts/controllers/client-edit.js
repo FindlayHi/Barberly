@@ -8,10 +8,15 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('ClientEditCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ClientEditCtrl', function($scope, $routeParams, Client, $location) {
+    $scope.editClient = true;
+    $scope.client = {};
+    Client.one($routeParams.id).get().then(function(client) {
+      $scope.client = client;
+      $scope.saveClient = function() {
+        $scope.client.save().then(function() {
+          $location.path('/client/' + $routeParams.id);
+        });
+      };
+    });
   });
