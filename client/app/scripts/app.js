@@ -48,6 +48,11 @@ angular
         controller: 'ClientsCtrl',
         controllerAs: 'clients'
       })
+      .when('/services', {
+        templateUrl: 'views/services.html',
+        controller: 'ServicesCtrl',
+        controllerAs: 'services'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -59,4 +64,28 @@ angular
   })
   .factory('Barber', function (BarberRestangular){
     return BarberRestangular.service('Barber');
+  })
+  .factory('ClientRestangular', function(Restangular){
+    return Restangular.withConfig(function(RestangularConfigurer){
+      RestangularConfigurer.setRestangularFields({id: '_id'});
+    });
+  })
+  .factory('Client', function (ClientRestangular){
+    return ClientRestangular.service('Client');
+  })
+  .factory('ServiceRestangular', function(Restangular){
+    return Restangular.withConfig(function(RestangularConfigurer){
+      RestangularConfigurer.setRestangularFields({id: '_id'});
+    });
+  })
+  .factory('Service', function (ServiceRestangular){
+    return ServiceRestangular.service('Service');
+  })
+  .factory('AppointmentRestangular', function(Restangular){
+    return Restangular.withConfig(function(RestangularConfigurer){
+      RestangularConfigurer.setRestangularFields({id: '_id'});
+    });
+  })
+  .factory('Appointment', function (AppointmentRestangular){
+    return AppointmentRestangular.service('Appointment');
   });
