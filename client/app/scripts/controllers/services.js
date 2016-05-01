@@ -8,10 +8,6 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('ServicesCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ServicesCtrl', function ($scope, Service, Restangular) {
+    $scope.serviceList = Service.getList().$object;
   });

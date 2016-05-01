@@ -1,1 +1,32 @@
-<p>This is the services view.</p>
+<table class="table table-striped">
+  <thead>
+    <th>
+      Name:
+    </th>
+    <th>
+      Time Requiered:
+    </th>
+    <th>
+      Description:
+    </th>
+    <th>
+      Cost:
+    </th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="service in serviceList">
+      <td>
+        {{service.name}}
+      </td>
+      <td>
+        {{service.timeRequired}} miniutes
+      </td>
+      <td>
+        {{service.description}}
+      </td>
+      <td>
+        ${{service.cost}}.00
+      </td>
+    </tr>
+  </tbody>
+</table>
