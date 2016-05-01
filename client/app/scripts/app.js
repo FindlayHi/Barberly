@@ -164,6 +164,16 @@ angular
         controller: 'ClientAddCtrl',
         controllerAs: 'clientAdd'
       })
+      .when('/barberly', {
+        templateUrl: 'views/barberly.html',
+        controller: 'BarberlyCtrl',
+        controllerAs: 'barberly'
+      })
+      .when('/confirmation', {
+        templateUrl: 'views/confirmation.html',
+        controller: 'ConfirmationCtrl',
+        controllerAs: 'confirmation'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,30 @@
+<form role="form">
+  <div class="form-group">
+    <label for="name" class "control-label">Name</label>
+    <input type="text" ng-model="client.name" class="form-control" id="name" placeholder="Enter Client Name" />
+  </div>
+  <div class="form-group">
+    <label for="name" class "control-label">Phone</label>
+    <input type="text" ng-model="client.phone" class="form-control" id="phone" placeholder="Enter Client Phone #" />
+  </div>
+  <div class="form-group">
+    <label for="name" class "control-label">Email</label>
+    <input type="text" ng-model="client.email" class="form-control" id="email" placeholder="Enter Client Email" />
+  </div>
+  <div class="form-group">
+    <label for="service" class "control-label">Service:</label>
+    <select name="serviceSelect" id="service" ng-model="appointment.service">
+      <option ng-repeat="service in services" value="{{service._id}}">{{service.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="barber" class "control-label">Barber:</label>
+    <select name="barberSelect" id="barber" ng-model="appointment.barber">
+      <option ng-repeat="barber in barbers" value="{{barber._id}}">{{barber.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="time" class "control-label">Time:</label>
+    <input type="datetime-local" id="time" name="time" ng-model="appointment.time" placeholder="yyyy-MM-ddTHH:mm:ss" min="{{date}}" required />
+    <input type="submit" class="btn btn-primary" ng-click="saveAppointment()" value="Save" />
+</form>
