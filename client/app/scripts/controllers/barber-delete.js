@@ -16,6 +16,6 @@ angular.module('clientApp')
       });
     };
     $scope.back = function() {
-      $location.path('/barber' + $routeParams.id);
+      $location.path('/barber/' + $routeParams.id);
     };
   });

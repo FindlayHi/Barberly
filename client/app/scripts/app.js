@@ -38,26 +38,6 @@ angular
         controller: 'BarbersCtrl',
         controllerAs: 'barbers'
       })
-      .when('/create/barber', {
-        templateUrl: 'views/barber-add.html',
-        controller: 'BarberAddCtrl',
-        // controllerAs: 'barbersAdd'
-      })
-      .when('/barber/:id', {
-        templateUrl: 'views/barber-view.html',
-        controller: 'BarberViewCtrl',
-        //controllerAs: 'barbers'
-      })
-      .when('/barber/:id/edit', {
-        templateUrl: 'views/barber-edit.html',
-        controller: 'BarberEditCtrl',
-        //controllerAs: 'barbers'
-      })
-      .when('/barber/:id/delete', {
-        templateUrl: 'views/barber-delete.html',
-        controller: 'BarberDeleteCtrl',
-        //controllerAs: 'barbers'
-      })
       .when('/appointments', {
         templateUrl: 'views/appointments.html',
         controller: 'AppointmentsCtrl',
@@ -152,6 +132,11 @@ angular
         templateUrl: 'views/appointment-add.html',
         controller: 'AppointmentAddCtrl',
         controllerAs: 'appointmentAdd'
+      })
+      .when('/create/client', {
+        templateUrl: 'views/client-add.html',
+        controller: 'ClientAddCtrl',
+        controllerAs: 'clientAdd'
       })
       .otherwise({
         redirectTo: '/'

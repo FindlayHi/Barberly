@@ -8,10 +8,14 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('ClientDeleteCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ClientDeleteCtrl', function($scope, $routeParams, Client, $location) {
+    $scope.client = Client.one($routeParams.id).get().$object;
+    $scope.deleteClient = function() {
+      $scope.client.remove().then(function() {
+        $location.path('/clients');
+      });
+    };
+    $scope.back = function() {
+      $location.path('/client/' + $routeParams.id);
+    };
   });
