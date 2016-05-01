@@ -1,3 +1,6 @@
+<a class="btn btn-primary" href="/#/create/barber">
+  <span class="glyphicon glyphicon-plus"></span>Add Barber</a>
+<br>
 <table class="table table-striped">
   <thead>
     <th>
@@ -6,14 +9,27 @@
     <th>
       Bio:
     </th>
+    <th>
+      Controls
+    </th>
   </thead>
   <tbody>
     <tr ng-repeat="barber in barberList">
       <td>
-        {{barber.name}}
+        <a ng-href="/#/barber/{{barber._id}}">{{barber.name}}</a>
       </td>
       <td>
         {{barber.bio}}
+      </td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/barber/{{barber._id}}/edit" class="btn button-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/barber/{{barber._id}}/delete" class="btn button-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
       </td>
     </tr>
   </tbody>
