@@ -1,1 +1,10 @@
-<p>This is the appointment-delete view.</p>
+<ng-include src="'views/appointment-nav.html'"></ng-include>
+<form role="form">
+  <p>
+    Are you sure that you want to delete <b>Appointment</b>? There is no turning back from here!
+  </p>
+  <div class="form-group">
+    <input type="submit" class="btn btn-danger" ng-click="deleteAppointment()" value="Yes" />
+    <button ng-click="back()" type="button" class="btn btn-default">No</button>
+  </div>
+</form>
