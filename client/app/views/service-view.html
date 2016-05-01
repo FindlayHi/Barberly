@@ -1,1 +1,11 @@
-<p>This is the service-view view.</p>
+<ng-include src="'views/service-nav.html'"></ng-include>
+<h3>{{service.name}}</h3>
+<p>
+  {{service.timeRequired}} minutes
+</p>
+<p>
+  {{service.description}}
+</p>
+<p>
+  $ {{service.cost}}.00
+</p>

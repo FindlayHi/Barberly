@@ -8,10 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('ServiceViewCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ServiceViewCtrl', function($scope, $routeParams, Service) {
+    $scope.viewService = true;
+    $scope.service = Service.one($routeParams.id).get().$object;
   });

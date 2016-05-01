@@ -2,16 +2,18 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:ServiceAddCtrl
+ * @name clientApp.controller:BarberAddCtrl
  * @description
- * # ServiceAddCtrl
+ * # BarberAddCtrl
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('ServiceAddCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ServiceAddCtrl', function($scope, Service, $location) {
+    $scope.service = {};
+    $scope.saveService = function() {
+      Service.post($scope.service).then(function() {
+        $location.path('/services');
+      });
+    };
+
   });
