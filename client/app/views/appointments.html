@@ -21,9 +21,6 @@
   </thead>
   <tbody>
     <tr ng-repeat="appointment in appointmentsList">
-      <!-- <td>
-        <a ng-href="/#/appointment/{{appointment._id}}">{{appointment.name}}</a>
-      </td> -->
       <td>
         {{appointment.client.name}}
       </td>
@@ -34,7 +31,7 @@
         {{appointment.barber.name}}
       </td>
       <td>
-        {{appointment.time}}
+        {{appointment.time.toUTCString()}}
       </td>
       <td>
         <div class="button-group">

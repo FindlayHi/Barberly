@@ -16,6 +16,7 @@ angular.module('clientApp')
         value.client = Restangular.one('client', value.client).get().$object;
         value.service = Restangular.one('service', value.service).get().$object;
         value.barber = Restangular.one('barber', value.barber).get().$object;
+        value.time = new Date(value.time);
       });
       // console.log(results);
       $scope.appointmentsList = results;
