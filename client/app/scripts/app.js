@@ -33,6 +33,32 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/shifts', {
+        templateUrl: 'views/shifts.html',
+        controller: 'ShiftCtrl',
+        controllerAs: 'shifts'
+      })
+      .when('/create/shift', {
+        templateUrl: 'views/shift-add.html',
+        controller: 'ShiftAddCtrl',
+        // controllerAs: 'barbersAdd'
+      })
+      .when('/shift/:id', {
+        templateUrl: 'views/shift-view.html',
+        controller: 'ShiftViewCtrl',
+        //controllerAs: 'barbers'
+      })
+      .when('/shift/:id/edit', {
+        templateUrl: 'views/shift-edit.html',
+        controller: 'ShiftEditCtrl',
+        //controllerAs: 'barbers'
+      })
+      .when('/shift/:id/delete', {
+        templateUrl: 'views/shift-delete.html',
+        controller: 'ShiftDeleteCtrl',
+        //controllerAs: 'barbers'
+      })
+      // From here up
       .when('/barbers', {
         templateUrl: 'views/barbers.html',
         controller: 'BarbersCtrl',
