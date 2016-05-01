@@ -1,0 +1,39 @@
+<a class="btn btn-primary" href="/#/create/shift">
+  <span class="glyphicon glyphicon-plus"></span>Add shift</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <th>
+      Barber:
+    </th>
+    <th>
+      Start:
+    </th>
+    <th>
+      End:
+    </th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="shift in shiftList">
+      <td>
+        <a ng-href="/#/shift/{{shift._id}}">{{shift.barber}}</a>
+      </td>
+      <td>
+        {{shift.startTime}}
+      </td>
+      <td>
+        {{shift.endTime}}
+      </td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/shift/{{shift._id}}/edit" class="btn button-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/shift/{{shift._id}}/delete" class="btn button-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
